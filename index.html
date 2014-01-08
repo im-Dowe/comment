@@ -4,16 +4,31 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>评论组件</title>
+	<link rel="stylesheet" href="http://assets.dxycdn.com/core/css/reset-min.css"/>
+	<script type="application/javascript" src="angular.min.js"></script>
 	<script type="application/javascript" src="http://assets.dxycdn.com/core/jquery/1.6.1-min.js?t=1386757865546"></script>
 </head>
 <body>
+	<div id="ng-app" class="ng-app:commentApp" ng-app="commentApp">
+		<div ng-controller="commentCtrl">
 
-
+			<ul>
+				<li ng-repeat="content in comment.contents">
+					<span>{{content.id}}</span>
+					<span>{{content.username}}</span>
+					<span>{{content.body}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<!--<script type="application/javascript">
 		$.getScript('comment.js',function(){
 			comment.init();
 		});
 	</script>-->
 	<script type="application/javascript" src="comment.js"></script>
+	<script type="application/javascript" >
+		//comment.create();
+	</script>
 </body>
 </html>
